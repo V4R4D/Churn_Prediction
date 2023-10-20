@@ -1,24 +1,6 @@
+from sklearn.preprocessing import StandardScaler , LabelEncoder
 import streamlit as st
 import pandas as pd
-import subprocess
-
-# Check if required dependencies are installed, and if not, install them
-def install_dependencies():
-    try:
-        import joblib
-        import pandas
-        import sklearn
-        
-    except ImportError as e:
-        # If any of the required modules are missing, install them
-        subprocess.run(["pip", "install", "-r", "requirements.txt"])
-
-# Call the function to install dependencies
-install_dependencies()
-
-
-
-from sklearn.preprocessing import StandardScaler , LabelEncoder
 
 # Load the model here
 import joblib
