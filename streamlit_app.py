@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler , LabelEncoder
 
 # Load the model here
 import joblib
-model = joblib.load(r"model.sav")
+model = joblib.load(r"Model/model.sav")
 # model = load_model()
 
 # sample dataframe created with required columns to fit in standard scalar...
@@ -62,11 +62,11 @@ def main():
 
 
 
-        # Prepare user input data as a dictionary
+        # Prepare user input data as a dictionary in correct order
         user_inputs = {
             'Age': Age,
-            'Gender': gender_numeric,  # Ensure this aligns with the order in your dataset
-            'Location': location_numeric,  # Ensure this aligns with the order in your dataset
+            'Gender': gender_numeric,  
+            'Location': location_numeric, 
             'Subscription_Length_Months': Subscription_Length_Months,
             'Monthly_Bill': Monthly_Bill,
             'Total_Usage_GB': Total_Usage_GB
@@ -80,11 +80,6 @@ def main():
         sc.fit(df_sample[selected_columns])
 
         preprocess_df = pd.DataFrame.from_dict([user_inputs])
-
-
-
-
-        # Use your model to predict
         
 
         if st.button('Predict'):
