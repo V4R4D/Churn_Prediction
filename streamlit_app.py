@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
-from PIL import Image
+import pickle
 from sklearn.preprocessing import StandardScaler , LabelEncoder
 
 # Load the model here
 import joblib
-model = joblib.load(r"Model/model.sav")
+model = pickle.load(open('?Model/model.sav','rb'))
 # model = load_model()
 
 # sample dataframe created with required columns to fit in standard scalar...
