@@ -2,8 +2,6 @@ from sklearn.preprocessing import StandardScaler , LabelEncoder
 import streamlit as st
 import pandas as pd
 
-
-
 # Load the model here
 import joblib
 model = joblib.load(r"Model/model.sav")
