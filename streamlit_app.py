@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler , LabelEncoder
 
 # Load the model here
 import joblib
-model = pickle.load(open('?Model/model.sav','rb'))
+model = pickle.load(open('Model/model.sav','rb'))
 # model = load_model()
 
 # sample dataframe created with required columns to fit in standard scalar...
